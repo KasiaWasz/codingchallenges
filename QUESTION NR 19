@@ -1,0 +1,22 @@
+public class Ouestion19addAorBorC {
+    public static void main(String[] args) {
+        String input = "aaabbccde";
+        char letter = input.charAt(0);
+        StringBuffer str = new StringBuffer();
+        int counter = 0;
+        for (int i = 0; i < input.length(); i++) {
+            if (input.charAt(i) == letter) {
+                counter++;
+            } else {
+                if (counter > 0) {
+                    str.append(letter).append(counter);
+                    counter = 0;
+                    letter = input.charAt(i);
+                    counter++;
+                }
+            }
+            }if(counter > 0){
+            str.append(letter).append(counter);
+
+        }System.out.println(str);
+    }}
