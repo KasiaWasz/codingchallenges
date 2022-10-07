@@ -1,0 +1,22 @@
+public class MoveRobot {
+    public static void main(String[] args) {
+        int [] move = {0,0};
+        int countx = 0;
+        int county = 0;
+        String inp = "UUUL";
+        for(int i = 0; i < inp.length(); i++){
+            if(inp.charAt(i) == 'U'){
+                county ++;
+            }else if(inp.charAt(i) == 'D'){
+                county --;
+            }else if(inp.charAt(i) == 'R'){
+                countx ++;
+            }else if(inp.charAt(i) == 'L'){
+                countx --;
+            }
+        }
+            move[0] = countx;
+            move[1] = county;
+        System.out.println(Arrays.toString(move));
+    }
+}
