@@ -1,0 +1,12 @@
+public class removeDuplicates {
+    public static void main(String[] args) {
+        String input = "aabbbcccpssapllldss";
+        StringBuffer inp = new StringBuffer(input);
+        for (int j = 0; j <= inp.length() -1; j++) {
+            while (j< inp.length()-1 && inp.charAt(j) == inp.charAt(j + 1)){
+                inp.deleteCharAt(j+1);
+
+            }
+        }System.out.println(inp);
+    }
+}
