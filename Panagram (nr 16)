@@ -1,0 +1,20 @@
+public class Panagram {
+    public static void main(String[] args) {
+        String panagram = "The quick brown fox jumps over the lazy dog";
+        boolean checkIfpanagram = false;
+        for(char i = 'a'; i<= 'z'; i++){
+            if(!panagram.contains(String.valueOf(i))){
+                checkIfpanagram = false;
+                break;
+            }else{
+                checkIfpanagram = true;
+            }
+
+            } if(checkIfpanagram) {
+            System.out.println(" The string is a panagram");
+            }else{
+                System.out.println(" The string is not a panagram");
+            }
+
+    }
+}
