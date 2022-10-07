@@ -1,0 +1,23 @@
+public class PrimeNumbers {
+  public static void main(String[] args) {
+      int numbers = 7;
+      boolean primeCheck = true;
+          if(numbers<2){
+              primeCheck = false;
+          }else{
+              for(int j = 2; j<= numbers/2; j++){
+                  if(numbers%j == 0){
+                      primeCheck = false;
+                      break;
+                  }else{
+                      primeCheck = true;
+                  }}
+
+              }if(primeCheck);
+                  System.out.println("The number: " + numbers + " is prime number");
+          }else{
+                  System.out.println("false");
+              }
+      }
+  }
+}
