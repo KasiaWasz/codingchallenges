@@ -1,0 +1,7 @@
+public class SmallestNum {
+  public static void main(String[] args) {
+    int [] numbers = {2,8,11,3,10,1,28,0,15};
+    Arrays.sort(numbers);
+    System.out.println("The smallest number in the array is: " + numbers[0]);
+  }
+}
