@@ -1,0 +1,15 @@
+public class FirstNonRepeatingChar {
+    public static void main(String[] args) {
+        String input = "aaabbcccdbn";
+        boolean check = true;
+        for(char i : input.toCharArray()){
+            if(input.indexOf(i) == input.lastIndexOf(i)){
+                System.out.println("first non-repeating character is: " + i);
+                check = false;
+                break;
+            }
+            }if(check){
+            System.out.println("al characters are repeating in the input string");
+        }
+        }
+    }
