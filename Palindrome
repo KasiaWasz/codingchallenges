@@ -1,0 +1,17 @@
+public class Palindrome {
+    public static void main(String[] args) {
+        String input = "cbbc";
+        char c;
+        StringBuffer reversedString = new StringBuffer();
+        for(int i = input.length()-1; i>=0; i--){
+            c = input.charAt(i);
+            reversedString.append(c);
+    }
+        String reversed = reversedString.toString();
+        if(reversed.equals(input)){
+            System.out.println("The input is palindrome");
+        }else{
+            System.out.println("The input is not a palindrome");
+        }
+
+}}
