@@ -1,0 +1,27 @@
+public class Solution {
+  public static void main(String[] args) {
+    int a = 1;
+    int b = 2;
+    int den1 = 4;
+    int den2 = 3;
+    int den, num, x;
+
+    if(den1 == den2){
+      num = a + b;
+      den = den1;
+    }else{
+      den = den1*den2;
+      num = den1*b + den2*a;}
+    if(num > den){
+      x = num;}
+    else{
+      x = den;}
+    for(int i = 1 ; i <= x ; i++){
+      if(num%i == 0 && den%i == 0){
+        num = num/i;
+        den = den/i;
+        }
+      }
+    System.out.println("fraction 1: " + a + "/" + den1 + " + fraction 2: " + b + "/" + den2 + " equals " + num + "/" + den);
+  }
+}
