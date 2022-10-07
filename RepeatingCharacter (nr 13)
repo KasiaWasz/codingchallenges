@@ -1,0 +1,34 @@
+public class RepeatingCharacter {
+  public static void main(String[] args) {
+    String str = "abbcddd";
+    int count = 0;
+    int index = 0;
+    int max = 0;
+    char c = 'z';
+    for(int i = 0; i < str.length(); i++){
+      count = 0;
+      if(i==0){
+        for(int j = 0; j < str.length(); j++){
+          if(str.charAt(i) == str.charAt(j)){
+            c = str.charAt(i);
+            index = i;
+            count ++;
+          }
+        }
+      }else{
+        for(int j = 0; j < str.length(); j++){
+          if(str.charAt(i) == str.charAt(j) && str.charAt(i) != str.charAt(index)){
+            count ++;
+          }
+        }
+      }
+    if(count > max){
+      max = count;
+      index = i;
+      c = str.charAt(i);
+    }
+    }
+    System.out.println("The character that occurs most often is: " + c + ", it's starting index is: " 
+    + index + "it occurs: " + max + " times");
+  }
+}
