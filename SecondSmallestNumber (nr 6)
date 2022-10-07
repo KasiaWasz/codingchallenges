@@ -1,0 +1,18 @@
+public class SecondSmallest {
+    public static void main(String[] args) {
+        int smallest = Integer.MAX_VALUE;
+        int secondSmallest = Integer.MAX_VALUE;
+        int [] array = {23,34,11,8,31,1,2};
+        for(int i = 0; i < array.length; i++){
+            if(array[i] < smallest){
+                smallest = array[i];
+            }
+        }for(int i = 0; i < array.length; i++){
+            if(array[i] > smallest && array[i] < secondSmallest){
+                secondSmallest = array[i];
+            }
+        }
+        System.out.println(secondSmallest);
+
+    }
+}
