@@ -1,0 +1,26 @@
+class Solution {
+  public static void main(String[] args) {
+    String ss[][] = {{"Bobby", "50"},
+            {"Charles", "90"},
+            {"Eric", "97"},
+            {"Bobby", "50"}};
+
+    Integer count = 0;
+
+    Integer cnt = 1;
+    HashMap<String, Integer> avg = new HashMap<String,Integer>();
+
+    for (int i = 0; i < ss.length; i++) {
+
+        for (int j = i+1; j < ss.length; j++) {
+            avg.put(ss[i][0], Integer.parseInt(ss[i][1]));
+            if (ss[i][0] == ss[j][0]) {
+                cnt ++;
+                count = (Integer.parseInt(ss[i][1]) + Integer.parseInt(ss[j][1]))/cnt;
+                avg.put(ss[i][0], count);
+
+        }}} int max =((int) Collections.max(avg.values()));
+        System.out.println(avg);
+    System.out.println(max);
+    }
+}
