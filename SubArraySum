@@ -1,0 +1,13 @@
+public class SubArraySum {
+    public static void main(String[] args) {
+    int[] numbers = {1,2,-2,3,5,10};
+    int subArraySum = Integer.MIN_VALUE;
+    int sum = 0;
+    for(int number:numbers){
+        sum = Math.max(number, sum + number);
+        subArraySum = Math.max(sum,subArraySum);
+    }
+        System.out.println(subArraySum);
+
+    }
+}
