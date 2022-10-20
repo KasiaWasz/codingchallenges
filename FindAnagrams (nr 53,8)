@@ -1,0 +1,31 @@
+import java.util.*;
+
+public class Anagrams {
+    public static void main(String[] args) {
+        String[] words = {"cat", "dog", "god"};
+        Set<String> set1 = new HashSet<>();
+        for (int i = 0; i < words.length; i++) {
+            for (int j = i; j < words.length; j++) {
+                String one = words[i];
+                String two = words[j];
+
+                if (one == two) {
+                } else {
+                    char[] arr = one.toCharArray();
+                    char[] arr2 = two.toCharArray();
+                    Arrays.sort(arr);
+                    Arrays.sort(arr2);
+
+                    if (Arrays.equals(arr, arr2)) {
+                        set1.add(one);
+                        set1.add(two);
+                        System.out.println("The anagrams are: " + one + " and " + two);
+                        System.out.println(set1);
+                    }
+                }
+
+
+            }
+        }
+    }
+}
