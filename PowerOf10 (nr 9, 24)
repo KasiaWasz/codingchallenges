@@ -1,0 +1,14 @@
+public class CheckifGivenNrPowerOf10 {
+    public static int powerOf10(int number){
+        if(number%10 == 0){
+            System.out.println("The number is the power of 10");
+        }else{
+            System.out.println("The number is not the power of 10");
+        }
+        return number;
+    }
+
+    public static void main(String[] args) {
+        powerOf10(100);
+    }
+}
